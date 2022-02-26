@@ -5,16 +5,13 @@
 
 ### Link
 ----
-
 ```
-(https://api.kanye.rest)
-
+https://api.kanye.rest
 ```
 
-## Project
+## About
 ---------------------------
-This project follows architecthural pattern in order to segregate as regras de negócio da UI e para 
-fciliatar o processo de testar os componentes,
+This project follows architecthural pattern in order to segregate the business rules da UI and to do more simple to test. 
 
 * MVVM
 * Coroutines
@@ -22,11 +19,7 @@ fciliatar o processo de testar os componentes,
 * View Binding
 * Unit Tests
 
-![alt text](Screenshot_20220225_200512.png)    ![alt text](Screenshot_20220225_200349.png)
-
-
-
-  
+<img src="Screenshot_20220225_200512.png" widt="400" height="600">            <img src="Screenshot_20220225_200349.png" widt="400" height="600">
 
 
 # kanyeApi
