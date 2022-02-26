@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Kanye West Quotes</string>
+    <string name="next_quote">Next Quote</string>
+    <string name="kanye_west"> Kanye West</string>
+    <string name="loading_quote"> Quote…</string>
+    <string name="response">Response</string>
+    <string name="kanye_west_speak">Kanye West quotes...</string>
+    <string name="button_to_next_quote">button_to_next_quote</string>
+    <string name="kanye_west_image">kanye west image</string>
+</resources>
