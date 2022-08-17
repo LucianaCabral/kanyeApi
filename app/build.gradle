@@ -55,4 +55,16 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-native-mt'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0-native-mt'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
-}
+
+    //Mockito
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
+    testImplementation "android.arch.core:core-testing:1.1.1"
+    //mockk
+    testImplementation "io.mockk:mockk:1.12.1"
+
+
+    //test coroutines
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4'
+
+
+    }
