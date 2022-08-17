@@ -44,7 +44,7 @@ class QuoteActivity : AppCompatActivity() {
 
     private fun getQuotes() {
         try {
-            viewModel.getQuote()
+            viewModel.init()
             viewModel.quotes.observe(this) {
                 if (it.isSuccessful) {
                     binding.tvQuote.text = it.body()?.quote
