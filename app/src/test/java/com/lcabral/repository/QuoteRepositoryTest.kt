@@ -27,6 +27,7 @@ class QuoteRepositoryTest {
 
     private val testDispatcher = UnconfinedTestDispatcher()
     private val retrofitService: RetrofitService = mockk(relaxed = true)
+    private val repository = QuoteRepository(retrofitService)
 
     @Before
     fun setUp() {
@@ -45,7 +46,7 @@ class QuoteRepositoryTest {
         coEvery { retrofitService.retrofitApi().getQuote() } returns itemQuote
 
         // When
-        QuoteRepository(retrofitService).getQuote()
+        repository.getQuote()
 
         //Then
         coVerify { retrofitService.retrofitApi().getQuote() }
