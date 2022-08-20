@@ -12,6 +12,7 @@ import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.setMain
@@ -90,6 +91,18 @@ class QuoteViewModelTest {
         //Then
         testDispatcher.scheduler.advanceTimeBy(1000)
         coVerify { quoteObserver.onChanged(mockedList) }
+    }
+
+    @Test
+    fun `when quotesRepository return a quote set on thew livedata` () = runBlocking() {
+        // Given
+        coEvery { repository.getQuote() } returns mockedList
+
+        // When
+        instantiateViewModel().init()
+
+        //Then
+        coVerify { instantiateViewModel().quotes.value }
     }
 }
 
